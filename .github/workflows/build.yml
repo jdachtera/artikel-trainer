@@ -28,7 +28,7 @@ jobs:
       - name: Upload & release
         uses: mnao305/chrome-extension-upload@1.1.1
         with:
-          file-path: dist/file.zip
+          file-path: dist.zip
           extension-id: hogefuga(extension id)
           client-id: ${{ secrets.CLIENT_ID }}
           client-secret: ${{ secrets.CLIENT_SECRET }}
