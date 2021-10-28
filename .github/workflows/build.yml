@@ -26,10 +26,9 @@ jobs:
       - run: yarn run build-package
       - run: yarn test
       - name: Upload & release
-        uses: mnao305/chrome-extension-upload@1.1.1
-        with:
-          file-path: dist.zip
-          extension-id: gfdjeoegpepninhhccjelomgohccpmlf
-          client-id: ${{ secrets.CLIENT_ID }}
-          client-secret: ${{ secrets.CLIENT_SECRET }}
-          refresh-token: ${{ secrets.REFRESH_TOKEN }}
+        run: yarn chrome-webstore-upload upload --source dist.zip --auto-publish
+        env:
+          EXTENSION_ID: gfdjeoegpepninhhccjelomgohccpmlf
+          CLIENT_ID: ${{ secrets.CLIENT_ID }}
+          CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
+          REFRESH_TOKEN: ${{ secrets.REFRESH_TOKEN }}
