@@ -32,7 +32,7 @@ jobs:
         # omitting it will create a new addon
         extension: gfdjeoegpepninhhccjelomgohccpmlf
         zip: dist.zip
-        client-id: ${{ secrets.CHROME_CLIENT_ID }}
-        client-secret: ${{ secrets.CHROME_CLIENT_SECRET }}
-        refresh-token: ${{ secrets.CHROME_REFRESH_TOKEN }}
+        client-id: ${{ secrets.CLIENT_ID }}
+        client-secret: ${{ secrets.CLIENT_SECRET }}
+        refresh-token: ${{ secrets.REFRESH_TOKEN }}
 
