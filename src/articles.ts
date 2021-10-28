@@ -1,0 +1,15 @@
+export const articles = {
+  bestimmt: ["der", "die", "das", "dem", "des", "den"],
+  unbestimmt: ["ein", "eine", "einen", "einem", "einer", "eines"],
+  unbestimmt_negiert: ["kein", "keine", "keinen", "keinem", "keiner", "keines"],
+  possesiv_1s: ["mein", "meine", "meinen", "meinem", "meiner", "meines"],
+  possesiv_2s: ["dein", "deine", "deinen", "deinem", "deiner", "deines"],
+  possesiv_3sm: ["sein", "seine", "seinen", "seinem", "seiner", "seines"],
+  possesiv_3sf: ["ihr", "ihre", "ihren", "ihrem", "ihrer", "ihres"],
+  possesiv_1p: ["unser", "unsere", "unseren", "unserem", "unseres", "unserer"],
+  possesiv_2p: ["euer", "eure", "euren", "eurem", "eurer", "eures"],
+  demonstrativ: ["dieser", "diese", "dieses", "diesen", "dieses", "diesem"],
+  indefinit_jeder: ["jeder", "jede", "jedes", "jeden", "jedem"],
+  indefinit_mancher: ["mancher", "manche", "manches", "manchen", "manchem"],
+  interrogativ: ["welcher", "welche", "welches", "welchen", "welchem"],
+};
