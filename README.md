@@ -9,7 +9,7 @@ https://chrome.google.com/webstore/detail/artikel-trainer/gfdjeoegpepninhhccjelo
 
 ## Prerequisites
 
-- [node + npm](https://nodejs.org/) (Current Version)
+- [node + yarn](https://nodejs.org/) (Current Version)
 
 ## Option
 
@@ -38,7 +38,7 @@ https://chrome.google.com/webstore/detail/artikel-trainer/gfdjeoegpepninhhccjelo
 ## Setup
 
 ```
-npm install
+yarn
 ```
 
 ## Import as Visual Studio Code project
@@ -48,7 +48,7 @@ npm install
 ## Build
 
 ```
-npm run build
+yarn build
 ```
 
 ## Build in watch mode
@@ -56,7 +56,7 @@ npm run build
 ### terminal
 
 ```
-npm run watch
+yarn watch
 ```
 
 ### Visual Studio Code
@@ -71,4 +71,4 @@ Load `dist` directory
 
 ## Test
 
-`npx jest` or `npm run test`
+`npx jest` or `yarn test`
