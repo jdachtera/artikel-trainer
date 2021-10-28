@@ -22,9 +22,9 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - run: npm ci
-      - run: npm run build-package --if-present
-      - run: npm test
+      - run: yarn ci
+      - run: yarn run build-package --if-present
+      - run: yarn test
       - name: Upload & release
         uses: mnao305/chrome-extension-upload@1.1.1
         with:
