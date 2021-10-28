@@ -26,13 +26,12 @@ jobs:
       - run: yarn run build-package
       - run: yarn test
 
-    - uses: trmcnvn/chrome-addon@v2
-      with:
-        # extension is only necessary when updating an existing addon,
-        # omitting it will create a new addon
-        extension: gfdjeoegpepninhhccjelomgohccpmlf
-        zip: dist.zip
-        client-id: ${{ secrets.CLIENT_ID }}
-        client-secret: ${{ secrets.CLIENT_SECRET }}
-        refresh-token: ${{ secrets.REFRESH_TOKEN }}
-
+      - uses: trmcnvn/chrome-addon@v2
+        with:
+          # extension is only necessary when updating an existing addon,
+          # omitting it will create a new addon
+          extension: gfdjeoegpepninhhccjelomgohccpmlf
+          zip: dist.zip
+          client-id: ${{ secrets.CLIENT_ID }}
+          client-secret: ${{ secrets.CLIENT_SECRET }}
+          refresh-token: ${{ secrets.REFRESH_TOKEN }}
