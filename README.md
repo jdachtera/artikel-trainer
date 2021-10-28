@@ -1,36 +1,39 @@
-# Chrome Extension TypeScript Starter
+# Artikel Trainer Chrome Extension
 
 ![build](https://github.com/chibat/chrome-extension-typescript-starter/workflows/build/badge.svg)
 
-Chrome Extension, TypeScript and Visual Studio Code
+Train your german article skills by reading websites in german
+Visit any german webseite and train your german grammar skills. All the "Artikel"s will be replaced by a multiple choice test. You can turn the extension on and off by clicking the german flag symbol in the toolbar.
+
+https://chrome.google.com/webstore/detail/artikel-trainer/gfdjeoegpepninhhccjelomgohccpmlf
 
 ## Prerequisites
 
-* [node + npm](https://nodejs.org/) (Current Version)
+- [node + npm](https://nodejs.org/) (Current Version)
 
 ## Option
 
-* [Visual Studio Code](https://code.visualstudio.com/)
+- [Visual Studio Code](https://code.visualstudio.com/)
 
 ## Includes the following
 
-* TypeScript
-* Webpack
-* React
-* Jest
-* Example Code
-    * Chrome Storage
-    * Options Version 2
-    * content script
-    * count up badge number
-    * background
+- TypeScript
+- Webpack
+- React
+- Jest
+- Example Code
+  - Chrome Storage
+  - Options Version 2
+  - content script
+  - count up badge number
+  - background
 
 ## Project Structure
 
-* src/typescript: TypeScript source files
-* src/assets: static files
-* dist: Chrome Extension directory
-* dist/js: Generated JavaScript files
+- src/typescript: TypeScript source files
+- src/assets: static files
+- dist: Chrome Extension directory
+- dist/js: Generated JavaScript files
 
 ## Setup
 
@@ -67,4 +70,5 @@ type `Ctrl + Shift + B`
 Load `dist` directory
 
 ## Test
+
 `npx jest` or `npm run test`
