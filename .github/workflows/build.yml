@@ -25,13 +25,11 @@ jobs:
       - run: yarn install --frozen-lockfile
       - run: yarn run build-package
       - run: yarn test
-
-      - uses: trmcnvn/chrome-addon@v2
+      - name: Upload & release
+        uses: mnao305/chrome-extension-upload@1.1.1
         with:
-          # extension is only necessary when updating an existing addon,
-          # omitting it will create a new addon
-          extension: gfdjeoegpepninhhccjelomgohccpmlf
-          zip: dist.zip
+          file-path: dist.zip
+          extension-id: gfdjeoegpepninhhccjelomgohccpmlf
           client-id: ${{ secrets.CLIENT_ID }}
           client-secret: ${{ secrets.CLIENT_SECRET }}
           refresh-token: ${{ secrets.REFRESH_TOKEN }}
