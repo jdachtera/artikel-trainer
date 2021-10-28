@@ -25,10 +25,14 @@ jobs:
       - run: yarn install --frozen-lockfile
       - run: yarn run build-package
       - run: yarn test
-      - name: Upload & release
-        run: yarn chrome-webstore-upload upload --source dist.zip --auto-publish
-        env:
-          EXTENSION_ID: gfdjeoegpepninhhccjelomgohccpmlf
-          CLIENT_ID: ${{ secrets.CLIENT_ID }}
-          CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
-          REFRESH_TOKEN: ${{ secrets.REFRESH_TOKEN }}
+
+    - uses: trmcnvn/chrome-addon@v2
+      with:
+        # extension is only necessary when updating an existing addon,
+        # omitting it will create a new addon
+        extension: gfdjeoegpepninhhccjelomgohccpmlf
+        zip: dist.zip
+        client-id: ${{ secrets.CHROME_CLIENT_ID }}
+        client-secret: ${{ secrets.CHROME_CLIENT_SECRET }}
+        refresh-token: ${{ secrets.CHROME_REFRESH_TOKEN }}
+
