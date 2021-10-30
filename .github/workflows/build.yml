@@ -23,13 +23,14 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: yarn install --frozen-lockfile
-      - run: yarn run build-package
+      - run: yarn run build
       - run: yarn test
-      - name: Upload & release
-        uses: mnao305/chrome-extension-upload@1.1.1
-        with:
-          file-path: dist.zip
-          extension-id: gfdjeoegpepninhhccjelomgohccpmlf
-          client-id: ${{ secrets.CLIENT_ID }}
-          client-secret: ${{ secrets.CLIENT_SECRET }}
-          refresh-token: ${{ secrets.REFRESH_TOKEN }}
+      - run: ./node_modules/.bin/chrome-webstore-upload upload \
+          --extension-id="$EXTENSION_ID" \
+          --client-id="$CLIENT_ID"  \
+          --refresh-token="$REFRESH_TOKEN" \
+          --source ./dist
+        env:
+          EXTENSION_ID: gfdjeoegpepninhhccjelomgohccpmlf
+          CLIENT_ID: ${{ secrets.CLIENT_ID }}
+          REFRESH_TOKEN: ${{ secrets.REFRESH_TOKEN }}

@@ -1,6 +1,6 @@
 {
   "name": "chrome-extension-typescript-starter",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "chrome-extension-typescript-starter",
   "main": "index.js",
   "scripts": {
@@ -8,9 +8,7 @@
     "build": "webpack --config webpack/webpack.prod.js",
     "clean": "rimraf dist",
     "test": "npx jest",
-    "style": "prettier --write \"src/**/*.{ts,tsx}\"",
-    "zip": "zip -r dist.zip dist",
-    "build-package": "yarn run clean && yarn run build && yarn run zip"
+    "style": "prettier --write \"src/**/*.{ts,tsx}\""
   },
   "author": "",
   "license": "MIT",
