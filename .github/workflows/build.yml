@@ -25,11 +25,7 @@ jobs:
       - run: yarn install --frozen-lockfile
       - run: yarn run build
       - run: yarn test
-      - run: ./node_modules/.bin/chrome-webstore-upload upload \
-          --extension-id="$EXTENSION_ID" \
-          --client-id="$CLIENT_ID"  \
-          --refresh-token="$REFRESH_TOKEN" \
-          --source ./dist
+      - run: ./node_modules/.bin/chrome-webstore-upload upload --extension-id="$EXTENSION_ID" --client-id="$CLIENT_ID" --refresh-token="$REFRESH_TOKEN" --source ./dist
         env:
           EXTENSION_ID: gfdjeoegpepninhhccjelomgohccpmlf
           CLIENT_ID: ${{ secrets.CLIENT_ID }}
