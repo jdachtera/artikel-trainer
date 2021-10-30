@@ -1,6 +1,6 @@
 # Artikel Trainer Chrome Extension
 
-![build](https://github.com/chibat/chrome-extension-typescript-starter/workflows/build/badge.svg)
+![build](https://github.com/jdachtera/artikel-trainer/workflows/build/badge.svg)
 
 Train your german article skills by reading websites in german
 Visit any german webseite and train your german grammar skills. All the "Artikel"s will be replaced by a multiple choice test. You can turn the extension on and off by clicking the german flag symbol in the toolbar.
