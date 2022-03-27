@@ -5,7 +5,7 @@ import { getArticleElementsWithContainers } from "../helpers";
 import { ArticleChooser } from "./ArticleChooser";
 import { css } from "@emotion/css";
 import { SuccessModal } from "./SuccessModal";
-import { CircularProgressWithLabel } from "./CircularProgressWIthLabel";
+import { CircularProgressWithLabel } from "./CircularProgressWithLabel";
 
 export const ArticleTrainer = ({
   initialElements,
@@ -97,20 +97,22 @@ export const ArticleTrainer = ({
       })}
       {isEnabled && (
         <>
-          <div
-            className={css`
-              z-index: 10000;
-              position: fixed;
-              padding: 5px;
-              background-color: #54ff05a6;
-              top: 20px;
-              right: 20px;
-            `}
-          >
-            <CircularProgressWithLabel
-              value={(validElements / elements.length) * 100}
-            />
-          </div>
+          {elements.length && (
+            <div
+              className={css`
+                z-index: 10000;
+                position: fixed;
+                padding: 5px;
+                background-color: #54ff05a6;
+                top: 20px;
+                right: 20px;
+              `}
+            >
+              <CircularProgressWithLabel
+                value={(validElements / elements.length) * 100}
+              />
+            </div>
+          )}
 
           <SuccessModal
             isModalOpen={isModalOpen}

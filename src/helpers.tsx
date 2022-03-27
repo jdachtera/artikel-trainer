@@ -1,6 +1,6 @@
 import { articles } from "./articles";
 
-const nodeNameWIhiteList = [
+const nodeNameWhiteList = [
   "SPAN",
   "DIV",
   "P",
@@ -26,7 +26,7 @@ export function getArticleElementsWithContainers(rootNode: Node) {
   }> = [];
 
   processAllTextNodes([rootNode], (element) => {
-    if (nodeNameWIhiteList.includes(element.parentNode?.nodeName ?? "")) {
+    if (nodeNameWhiteList.includes(element.parentNode?.nodeName ?? "")) {
       let html = element.textContent ?? "";
 
       Object.values(articles).forEach((lowerCaseArticles) => {
