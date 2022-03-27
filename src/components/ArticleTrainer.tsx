@@ -21,13 +21,13 @@ export const ArticleTrainer = ({
   useEffect(() => {
     chrome.storage.onChanged.addListener((changes, area) => {
       if (area === "sync" && changes.isEnabled) {
-        const isEnabled = Boolean(changes.isEnabled.newValue);
+        const isEnabled = Boolean(changes.isEnabled.newValue?.[location.host]);
         setIsEnabled(isEnabled);
       }
     });
 
     chrome.storage.sync.get(["isEnabled"], ({ isEnabled }) => {
-      setIsEnabled(isEnabled);
+      setIsEnabled(isEnabled?.[location.host]);
     });
   });
 

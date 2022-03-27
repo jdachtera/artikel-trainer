@@ -4,7 +4,7 @@
   "version": "1.6",
   "manifest_version": 3,
 
-  "permissions": ["storage", "scripting"],
+  "permissions": ["storage", "scripting", "tabs"],
 
   "content_scripts": [
     {
