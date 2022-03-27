@@ -1,7 +1,7 @@
 {
   "name": "Artikel Trainer",
   "description": "Train your german article skills by reading websites in german",
-  "version": "1.6",
+  "version": "1.7",
   "manifest_version": 3,
 
   "permissions": ["storage", "scripting", "tabs"],
