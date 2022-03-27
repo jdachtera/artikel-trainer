@@ -5,7 +5,7 @@ import { getArticleElementsWithContainers } from "../helpers";
 import { ArticleChooser } from "./ArticleChooser";
 import { css } from "@emotion/css";
 import { SuccessModal } from "./SuccessModal";
-import { CircularProgressWithLabel } from "./CircularProgressWithLabel";
+import { CircularProgressWithPercentage } from "./CircularProgressWithPercentage";
 
 export const ArticleTrainer = ({
   initialElements,
@@ -108,7 +108,7 @@ export const ArticleTrainer = ({
                 right: 20px;
               `}
             >
-              <CircularProgressWithLabel
+              <CircularProgressWithPercentage
                 value={(validElements / elements.length) * 100}
               />
             </div>

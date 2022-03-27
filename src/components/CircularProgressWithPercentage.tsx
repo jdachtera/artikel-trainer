@@ -2,7 +2,7 @@ import React from "react";
 import { CircularProgress, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 
-export const CircularProgressWithLabel = React.memo(
+export const CircularProgressWithPercentage = React.memo(
   ({ value }: { value: number }) => (
     <Box sx={{ position: "relative", display: "inline-flex" }}>
       <CircularProgress variant="determinate" value={value} />
